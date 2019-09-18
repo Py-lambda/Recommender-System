@@ -3,7 +3,9 @@ Content-based recommenders: suggest similar items based on a particular item. Th
 More specifically, we will compute pairwise similarity scores for all movies based on their plot descriptions and recommend movies based on that similarity score.
 Computing Term Frequency-Inverse Document Frequency (TF-IDF) vectors for each document will give a matrix where each column represents a word in the overview vocabulary (all the words that appear in at least one document) and each column represents a movie, as before.
 In its essence, the TF-IDF score is the frequency of a word occurring in a document, down-weighted by the number of documents in which it occurs. This is done to reduce the importance of words that occur frequently in plot overviews and therefore, their significance in computing the final similarity score.
-will be using the cosine similarity to calculate a numeric quantity that denotes the similarity between two movies. You use the cosine similarity score since it is independent of magnitude and is relatively easy and fast to calculate (especially when used in conjunction with TF-IDF scores.
+We will use the cosine similarity to calculate a numeric quantity that denotes the similarity between two movies. We will be using the cosine similarity score since it is independent of magnitude and is relatively easy and fast to calculate (especially when used in conjunction with TF-IDF scores.
 Mathematically, it is defined as follows: 
+
 cosine(x,y) = x.y⊺ / ||x||.||y||
+
 Since you have used the TF-IDF vectorizer, calculating the dot product will directly give you the cosine similarity score.
